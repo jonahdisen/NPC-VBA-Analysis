@@ -8,7 +8,7 @@
 %-----------------------------------------------------------------------
 
 
-function bias_field_correct(path, groups, sizes)
+function bias_field_correct(path, scripts_path, groups, sizes)
 
 for i = 1:length(groups)
     group = groups{i};
@@ -22,27 +22,27 @@ for i = 1:length(groups)
             matlabbatch{1}.spm.spatial.preproc.channel.biasreg = 0.0001;
             matlabbatch{1}.spm.spatial.preproc.channel.biasfwhm = 60;
             matlabbatch{1}.spm.spatial.preproc.channel.write = [1 1];
-            matlabbatch{1}.spm.spatial.preproc.tissue(1).tpm ={'/Users/jonahisen1/Documents/MATLAB/spm12/tpm/TPM.nii,1'};
+            matlabbatch{1}.spm.spatial.preproc.tissue(1).tpm ={strcat(scripts_path,'extras/TPM.nii,1')};
             matlabbatch{1}.spm.spatial.preproc.tissue(1).ngaus = 1;
             matlabbatch{1}.spm.spatial.preproc.tissue(1).native = [0 0];
             matlabbatch{1}.spm.spatial.preproc.tissue(1).warped = [0 0];
-            matlabbatch{1}.spm.spatial.preproc.tissue(2).tpm = {'/Users/jonahisen1/Documents/MATLAB/spm12/tpm/TPM.nii,2'};
+            matlabbatch{1}.spm.spatial.preproc.tissue(2).tpm = {strcat(scripts_path,'extras/TPM.nii,2')};
             matlabbatch{1}.spm.spatial.preproc.tissue(2).ngaus = 1;
             matlabbatch{1}.spm.spatial.preproc.tissue(2).native = [0 0];
             matlabbatch{1}.spm.spatial.preproc.tissue(2).warped = [0 0];
-            matlabbatch{1}.spm.spatial.preproc.tissue(3).tpm ={'/Users/jonahisen1/Documents/MATLAB/spm12/tpm/TPM.nii,3'};
+            matlabbatch{1}.spm.spatial.preproc.tissue(3).tpm ={strcat(scripts_path,'extras/TPM.nii,3')};
             matlabbatch{1}.spm.spatial.preproc.tissue(3).ngaus = 2;
             matlabbatch{1}.spm.spatial.preproc.tissue(3).native = [0 0];
             matlabbatch{1}.spm.spatial.preproc.tissue(3).warped = [0 0];
-            matlabbatch{1}.spm.spatial.preproc.tissue(4).tpm ={'/Users/jonahisen1/Documents/MATLAB/spm12/tpm/TPM.nii,4'};
+            matlabbatch{1}.spm.spatial.preproc.tissue(4).tpm ={strcat(scripts_path,'extras/TPM.nii,4')};
             matlabbatch{1}.spm.spatial.preproc.tissue(4).ngaus = 3;
             matlabbatch{1}.spm.spatial.preproc.tissue(4).native = [0 0];
             matlabbatch{1}.spm.spatial.preproc.tissue(4).warped = [0 0];
-            matlabbatch{1}.spm.spatial.preproc.tissue(5).tpm ={'/Users/jonahisen1/Documents/MATLAB/spm12/tpm/TPM.nii,5'};
+            matlabbatch{1}.spm.spatial.preproc.tissue(5).tpm ={strcat(scripts_path,'extras/TPM.nii,5')};
             matlabbatch{1}.spm.spatial.preproc.tissue(5).ngaus = 4;
             matlabbatch{1}.spm.spatial.preproc.tissue(5).native = [0 0];
             matlabbatch{1}.spm.spatial.preproc.tissue(5).warped = [0 0];
-            matlabbatch{1}.spm.spatial.preproc.tissue(6).tpm = {'/Users/jonahisen1/Documents/MATLAB/spm12/tpm/TPM.nii,6'};
+            matlabbatch{1}.spm.spatial.preproc.tissue(6).tpm = {strcat(scripts_path,'extras/TPM.nii,6')};
             matlabbatch{1}.spm.spatial.preproc.tissue(6).ngaus = 2;
             matlabbatch{1}.spm.spatial.preproc.tissue(6).native = [0 0];
             matlabbatch{1}.spm.spatial.preproc.tissue(6).warped = [0 0];

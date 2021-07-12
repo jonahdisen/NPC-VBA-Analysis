@@ -9,7 +9,7 @@
 %-----------------------------------------------------------------------
 
 
-function validation(path, size)
+function validation(path, group_size)
 
 trials = ["GM", "FLAIR", "DTI_MD", "DTI_FA", "NODDI_ficvf", "NPC"]; %Array of different analyses performed
 
@@ -30,7 +30,7 @@ for i = 1:length(trials)
         data = zeros(4, 1);
         buffer = 0;
         
-        for k = 1:size
+        for k = 1:group_size
             if strcmp("NPC", trials(i))
                 results = strcat(path, 'results/', char(trials(i)), '/D/D', num2str(k, '%03.f'), '/D', num2str(k, '%03.f'), '_tfce_npc_stouffer_fwep.nii');
             else

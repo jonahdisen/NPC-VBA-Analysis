@@ -4,13 +4,48 @@ This repository contains the pre-processing and analysis codes used in the work 
 
 ## Introduction
 
-One third of patients with medically refractory focal epilepsy have normal-appearing MRI scans. This poses a problem, as identification of the epileptogenic region is required to consider surgical treatment. In Isen et al., we performed a multimodal voxel-based analysis (VBA) to identify brain abnormalities in MRI-negative focal epilepsy. Using the non-parametric combination algorithm, we combined data from various MR sequences to form a joint inference from a multivariate dataset.
+One third of patients with medically refractory focal epilepsy have normal-appearing MRI scans. This poses a problem, as identification of the epileptogenic region is required to consider surgical treatment. In Isen et al., we performed a multimodal voxel-based analysis (VBA) to identify brain abnormalities in MRI-negative focal epilepsy. Using the non-parametric combination (NPC) algorithm, we combined data from various MR sequences to form a joint inference from a multivariate dataset.
 
 ## Requirements
 
 This work was implemented as a set of MATLAB and bash routines, which can be carried out within an MATLAB environment.
 
+For the majority of pre-processing steps of MR scans, SPM12 was used, which can be downloaded from [here](https://www.fil.ion.ucl.ac.uk/spm/software/download/)
+
+For some pre-processing steps and all of the statistical analysis, FMRIB Software Library (FSL) was used, which can be installed from [here](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation)
+
+The NPC analysis was run with FSL's Permutation Analysis of Linear Models tool, which can be downloaded from [here](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/PALM/UserGuide)
+
+
 ## Usage
+
+### Data
+
+This analysis was run with the multimodal data for every subject located in the same directory. The data had the following format:
+
+[subject group][subject ID]_[MR modality].nii
+
+Subject group was one of the following:
+
+C: Control group
+D: MRI-positive group with discrete lesions on MR scans
+N: MRI-negative group with no visible findings on MR scans
+
+Subject ID was a 3 character numeric identifier (ex. 001, 021, 046)
+
+MR modality was one of the following: 
+T1: Basic T1-weighted scan
+FLAIR: Fluid-attenuated inversion recovery sequence
+DTI_B0: Non-diffusion weighted scan from diffusion tensor imaging
+DTI_FA: Fractional anisotropy from diffusion tensor imaging
+DTI_MD: Mean diffusivity from diffusion tensor imaging
+NODDI_ficvf: Neurite density index from neurite orientation and dispersion density imaging
+
+### Running Script
+
+The pipeline is initiated by running the main.m script
+
+Within this script, the user can change flags to toggle both the pre-processing scripts and analysis scripts. The user should also ensure the paths to data and scripts are correctly set, and that the # of subjects for each group are correctly set.
 
 ## Relevant Citations
 

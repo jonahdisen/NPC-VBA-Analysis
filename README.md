@@ -27,19 +27,19 @@ This analysis was run with the multimodal data for every subject located in the 
 
 Subject group was one of the following:
 
-C: Control group
-D: MRI-positive group with discrete lesions on MR scans
-N: MRI-negative group with no visible findings on MR scans
+- C: Control group
+- D: MRI-positive group with discrete lesions on MR scans
+- N: MRI-negative group with no visible findings on MR scans
 
 Subject ID was a 3 character numeric identifier (ex. 001, 021, 046)
 
 MR modality was one of the following: 
-T1: Basic T1-weighted scan
-FLAIR: Fluid-attenuated inversion recovery sequence
-DTI_B0: Non-diffusion weighted scan from diffusion tensor imaging
-DTI_FA: Fractional anisotropy from diffusion tensor imaging
-DTI_MD: Mean diffusivity from diffusion tensor imaging
-NODDI_ficvf: Neurite density index from neurite orientation and dispersion density imaging
+- T1: Basic T1-weighted scan
+- FLAIR: Fluid-attenuated inversion recovery sequence
+- DTI_B0: Non-diffusion weighted scan from diffusion tensor imaging
+- DTI_FA: Fractional anisotropy from diffusion tensor imaging
+- DTI_MD: Mean diffusivity from diffusion tensor imaging
+- NODDI_ficvf: Neurite density index from neurite orientation and dispersion density imaging
 
 ### Running Script
 

@@ -31,7 +31,7 @@ Subject group was one of the following:
 - D: MRI-positive group with discrete lesions on MR scans
 - N: MRI-negative group with no visible findings on MR scans
 
-Subject ID was a 3 character numeric identifier (ex. 001, 021, 046)
+Subject ID was a unique 3 character numeric identifier (ex. 001, 021, 046)
 
 MR modality was one of the following: 
 - T1: Basic T1-weighted scan

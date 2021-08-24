@@ -1,6 +1,6 @@
 # Multimodal Voxel-Based Analysis using Non-Parametric Combination
 
-This repository contains the pre-processing and analysis codes used in the work by Isen et al. titled "Non-Parametric Combination of Multimodal MRI for Lesion Detection in MRI-Negative Focal Epilepsy".
+This repository contains the pre-processing and analysis codes used in the work by Isen et al. titled "Non-Parametric Combination of Multimodal MRI for Lesion Detection in Focal Epilepsy".
 
 ## Introduction
 
